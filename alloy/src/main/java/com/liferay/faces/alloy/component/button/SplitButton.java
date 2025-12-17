@@ -19,22 +19,22 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.el.ValueExpression;
-import javax.faces.FacesException;
-import javax.faces.component.ContextCallback;
-import javax.faces.component.TransientStateHelper;
-import javax.faces.component.UIComponent;
-import javax.faces.component.behavior.ClientBehavior;
-import javax.faces.component.visit.VisitCallback;
-import javax.faces.component.visit.VisitContext;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.ComponentSystemEvent;
-import javax.faces.event.ComponentSystemEventListener;
-import javax.faces.event.FacesEvent;
-import javax.faces.event.SystemEvent;
-import javax.faces.event.SystemEventListener;
+import jakarta.el.ValueExpression;
+import jakarta.faces.FacesException;
+import jakarta.faces.component.ContextCallback;
+import jakarta.faces.component.TransientStateHelper;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.component.behavior.ClientBehavior;
+import jakarta.faces.component.visit.VisitCallback;
+import jakarta.faces.component.visit.VisitContext;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.event.AbortProcessingException;
+import jakarta.faces.event.ComponentSystemEvent;
+import jakarta.faces.event.ComponentSystemEventListener;
+import jakarta.faces.event.FacesEvent;
+import jakarta.faces.event.SystemEvent;
+import jakarta.faces.event.SystemEventListener;
 
 import com.liferay.faces.util.component.ComponentUtil;
 
@@ -396,12 +396,6 @@ public class SplitButton extends SplitButtonCompat {
 		return getWrappedButton().getValue();
 	}
 
-	@SuppressWarnings("deprecation")
-	@Override
-	public javax.faces.el.ValueBinding getValueBinding(String name) {
-		return getWrappedButton().getValueBinding(name);
-	}
-
 	@Override
 	public ValueExpression getValueExpression(String name) {
 		return getWrappedButton().getValueExpression(name);
@@ -700,12 +694,6 @@ public class SplitButton extends SplitButtonCompat {
 	@Override
 	public void setValue(Object value) {
 		getWrappedButton().setValue(value);
-	}
-
-	@SuppressWarnings("deprecation")
-	@Override
-	public void setValueBinding(String name, javax.faces.el.ValueBinding binding) {
-		getWrappedButton().setValueBinding(name, binding);
 	}
 
 	@Override

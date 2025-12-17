@@ -19,23 +19,23 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.el.MethodExpression;
-import javax.el.ValueExpression;
-import javax.faces.FacesException;
-import javax.faces.component.ContextCallback;
-import javax.faces.component.TransientStateHelper;
-import javax.faces.component.UIComponent;
-import javax.faces.component.behavior.ClientBehavior;
-import javax.faces.component.visit.VisitCallback;
-import javax.faces.component.visit.VisitContext;
-import javax.faces.context.FacesContext;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.ActionListener;
-import javax.faces.event.ComponentSystemEvent;
-import javax.faces.event.ComponentSystemEventListener;
-import javax.faces.event.FacesEvent;
-import javax.faces.event.SystemEvent;
-import javax.faces.event.SystemEventListener;
+import jakarta.el.MethodExpression;
+import jakarta.el.ValueExpression;
+import jakarta.faces.FacesException;
+import jakarta.faces.component.ContextCallback;
+import jakarta.faces.component.TransientStateHelper;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.component.behavior.ClientBehavior;
+import jakarta.faces.component.visit.VisitCallback;
+import jakarta.faces.component.visit.VisitContext;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.event.AbortProcessingException;
+import jakarta.faces.event.ActionListener;
+import jakarta.faces.event.ComponentSystemEvent;
+import jakarta.faces.event.ComponentSystemEventListener;
+import jakarta.faces.event.FacesEvent;
+import jakarta.faces.event.SystemEvent;
+import jakarta.faces.event.SystemEventListener;
 
 import com.liferay.faces.util.component.ComponentUtil;
 
@@ -118,20 +118,8 @@ public class SplitCommandButton extends SplitCommandButtonCompat {
 	}
 
 	@Override
-	@SuppressWarnings("deprecation")
-	public javax.faces.el.MethodBinding getAction() {
-		return getWrappedCommandButton().getAction();
-	}
-
-	@Override
 	public MethodExpression getActionExpression() {
 		return getWrappedCommandButton().getActionExpression();
-	}
-
-	@Override
-	@SuppressWarnings("deprecation")
-	public javax.faces.el.MethodBinding getActionListener() {
-		return getWrappedCommandButton().getActionListener();
 	}
 
 	@Override
@@ -410,12 +398,6 @@ public class SplitCommandButton extends SplitCommandButtonCompat {
 		return getWrappedCommandButton().getValue();
 	}
 
-	@SuppressWarnings("deprecation")
-	@Override
-	public javax.faces.el.ValueBinding getValueBinding(String name) {
-		return getWrappedCommandButton().getValueBinding(name);
-	}
-
 	@Override
 	public ValueExpression getValueExpression(String name) {
 		return getWrappedCommandButton().getValueExpression(name);
@@ -533,20 +515,8 @@ public class SplitCommandButton extends SplitCommandButtonCompat {
 	}
 
 	@Override
-	@SuppressWarnings("deprecation")
-	public void setAction(javax.faces.el.MethodBinding action) {
-		getWrappedCommandButton().setAction(action);
-	}
-
-	@Override
 	public void setActionExpression(MethodExpression actionExpression) {
 		getWrappedCommandButton().setActionExpression(actionExpression);
-	}
-
-	@Override
-	@SuppressWarnings("deprecation")
-	public void setActionListener(javax.faces.el.MethodBinding actionListener) {
-		getWrappedCommandButton().setActionListener(actionListener);
 	}
 
 	@Override
@@ -726,12 +696,6 @@ public class SplitCommandButton extends SplitCommandButtonCompat {
 	@Override
 	public void setValue(Object value) {
 		getWrappedCommandButton().setValue(value);
-	}
-
-	@SuppressWarnings("deprecation")
-	@Override
-	public void setValueBinding(String name, javax.faces.el.ValueBinding binding) {
-		getWrappedCommandButton().setValueBinding(name, binding);
 	}
 
 	@Override
