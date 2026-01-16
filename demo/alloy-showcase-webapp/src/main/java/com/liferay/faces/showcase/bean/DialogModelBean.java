@@ -13,15 +13,15 @@
  */
 package com.liferay.faces.showcase.bean;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 
 /**
  * @author  Vernon Singleton
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class DialogModelBean {
 
 	private String text;

@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 
 
@@ -26,7 +26,7 @@ import jakarta.faces.context.FacesContext;
  * @author  Neil Griffin
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class AutoCompleteBackingBean {
 
 	// Case-insensitive phrase match filter

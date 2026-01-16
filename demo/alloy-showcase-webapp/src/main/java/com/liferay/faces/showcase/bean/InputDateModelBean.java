@@ -20,14 +20,14 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class InputDateModelBean {
 

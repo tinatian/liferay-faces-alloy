@@ -21,9 +21,9 @@ import jakarta.annotation.PostConstruct;
 import jakarta.faces.application.Application;
 import jakarta.faces.application.Resource;
 import jakarta.faces.application.ResourceHandler;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 
@@ -35,11 +35,11 @@ import com.liferay.faces.util.application.FacesResource;
  * @author  Kyle Stiemann
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class VideoBacking {
 
 	// Injections
-	@ManagedProperty(value = "#{videoService}")
+	@Inject
 	private VideoService videoService;
 
 	private String encodedMp4ResourceURL;

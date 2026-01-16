@@ -16,9 +16,9 @@ package com.liferay.faces.showcase.bean;
 import java.util.List;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.component.UICommand;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
@@ -33,13 +33,13 @@ import com.liferay.faces.util.model.UploadedFile;
  * @author  Neil Griffin
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class InputFileBackingBean {
 
 	// Logger
 	private static final Logger logger = LoggerFactory.getLogger(InputFileBackingBean.class);
 
-	@ManagedProperty(value = "#{inputFileModelBean}")
+	@Inject
 	private InputFileModelBean inputFileModelBean;
 
 	public void deleteUploadedFile(ActionEvent actionEvent) {
@@ -95,7 +95,7 @@ public class InputFileBackingBean {
 
 	public void setInputFileModelBean(InputFileModelBean inputFileModelBean) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.inputFileModelBean = inputFileModelBean;
 	}
 }

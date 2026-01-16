@@ -13,9 +13,9 @@
  */
 package com.liferay.faces.showcase.bean;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 
 import com.liferay.faces.util.logging.Logger;
 import com.liferay.faces.util.logging.LoggerFactory;
@@ -24,14 +24,14 @@ import com.liferay.faces.util.logging.LoggerFactory;
 /**
  * @author  Vernon Singleton
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class DialogBackingBean {
 
 	// Logger
 	private static final Logger logger = LoggerFactory.getLogger(DialogBackingBean.class);
 
-	@ManagedProperty(name = "dialogModelBean", value = "#{dialogModelBean}")
+	@Inject
 	private DialogModelBean dialogModelBean;
 
 	public void setDialogModelBean(DialogModelBean dialogModelBean) {

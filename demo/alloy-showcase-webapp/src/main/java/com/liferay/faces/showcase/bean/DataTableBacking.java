@@ -19,9 +19,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.component.UICommand;
 import jakarta.faces.component.UISelectOne;
 import jakarta.faces.context.FacesContext;
@@ -44,7 +44,7 @@ import com.liferay.faces.showcase.service.CustomerService;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean
+@Named
 @ViewScoped
 public class DataTableBacking implements Serializable {
 
@@ -52,7 +52,7 @@ public class DataTableBacking implements Serializable {
 	private static final long serialVersionUID = 1715081848553221866L;
 
 	// Injections
-	@ManagedProperty(value = "#{customerService}")
+	@Inject
 	private transient CustomerService customerService;
 
 	// Private Data Members
@@ -181,7 +181,7 @@ public class DataTableBacking implements Serializable {
 
 	public void setCustomerService(CustomerService customerService) {
 
-		// Injected via @ManagedProperty annotation.
+		// Injected via @Inject annotation.
 		this.customerService = customerService;
 	}
 

@@ -16,8 +16,8 @@ package com.liferay.faces.showcase.bean;
 import java.io.Serializable;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.AjaxBehaviorEvent;
 import jakarta.faces.event.PhaseId;
@@ -31,7 +31,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
  * @author  Neil Griffin
  */
 @ViewScoped
-@ManagedBean
+@Named
 public class ProgressBarBacking implements Serializable {
 
 	// serialVersionUID

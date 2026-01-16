@@ -19,8 +19,8 @@ import java.util.Collections;
 import java.util.List;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 
 import com.liferay.faces.util.application.FacesResource;
 
@@ -29,7 +29,7 @@ import com.liferay.faces.util.application.FacesResource;
  * @author  Kyle Stiemann
  */
 @ApplicationScoped
-@ManagedBean(name = "audioService")
+@Named("audioService")
 public class AudioServiceMockImpl implements AudioService, Serializable {
 
 	// serialVersionUID

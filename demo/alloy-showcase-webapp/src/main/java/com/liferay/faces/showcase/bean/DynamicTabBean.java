@@ -15,14 +15,14 @@ package com.liferay.faces.showcase.bean;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean
+@Named
 @ViewScoped
 public class DynamicTabBean implements Serializable {
 

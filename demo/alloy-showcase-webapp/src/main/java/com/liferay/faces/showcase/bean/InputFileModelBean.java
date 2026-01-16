@@ -20,8 +20,8 @@ import java.util.List;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 import com.liferay.faces.util.logging.Logger;
 import com.liferay.faces.util.logging.LoggerFactory;
@@ -32,7 +32,7 @@ import com.liferay.faces.util.model.UploadedFile;
  * @author  Neil Griffin
  */
 @ViewScoped
-@ManagedBean
+@Named
 public class InputFileModelBean implements Serializable {
 
 	// serialVersionUID

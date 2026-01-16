@@ -15,8 +15,8 @@ package com.liferay.faces.showcase.bean;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.AjaxBehaviorEvent;
 
@@ -26,7 +26,7 @@ import com.liferay.faces.alloy.component.tab.TabSelectEvent;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean
+@Named
 @ViewScoped
 public class TabViewWizardBean implements Serializable {
 

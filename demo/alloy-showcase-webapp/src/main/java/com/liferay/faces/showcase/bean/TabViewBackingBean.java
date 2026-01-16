@@ -16,8 +16,8 @@ package com.liferay.faces.showcase.bean;
 import java.util.Map;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.AjaxBehaviorEvent;
 
@@ -29,7 +29,7 @@ import com.liferay.faces.alloy.component.tabview.TabView;
  * @author  Vernon Singleton
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class TabViewBackingBean {
 
 	private TabView tabView;
